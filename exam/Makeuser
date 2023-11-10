@@ -1,0 +1,14 @@
+CC = gcc
+CFLAGS = -Wall -Wextra
+SRC = file_manager.c
+OUTPUT = file_manager
+
+all: $(OUTPUT)
+
+$(OUTPUT): $(SRC)
+	$(CC) $(CFLAGS) -o $(OUTPUT) $(SRC)
+
+clean:
+	rm -f $(OUTPUT)
+
+.PHONY: all clean
